@@ -8,8 +8,16 @@ function App() {
   // let Counter = 15;
 
   const addValue = () => {
-    // Counter = Counter + 1;
+    if (Counter == 100) {
+      alert("you reached at 100 congrates🎊🎉");
+    }
     setCounter(Counter + 1);
+  };
+
+  const removevalue = () => {
+    if (Counter !== 0) {
+      setCounter(Counter - 1);
+    }
   };
   return (
     <>
@@ -17,7 +25,7 @@ function App() {
       <h2>Counter Value : {Counter}</h2>
       <button onClick={addValue}>Add Value{Counter}</button>
       <br />
-      <button>Remove Value{Counter}</button>
+      <button onClick={removevalue}>Remove Value{Counter}</button>
     </>
   );
 }
